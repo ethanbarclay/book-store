@@ -1,0 +1,226 @@
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.3fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.5fr 1.5fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar content7 content8 content9"
+    "sidebar content4 content5 content6"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #004d40;
+  text-align: center;
+}
+
+nav {
+  background: #808080;
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+}
+nav ul {
+  list-style-type: none;
+  margin: -10px;
+  padding: 0;
+  overflow: hidden;
+}
+nav li {
+  float: left;
+}
+nav li:first-of-type {
+  font-weight: bold;
+}
+nav a:link,
+nav a:visited {
+  display: block;
+  width: 160px;
+  color: #ffffff;
+  background-color: #333;
+  text-align: center;
+  padding: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav a:hover,
+nav a:active {
+  background-color: #666;
+}
+nav input[type="text"] {
+  padding: 6px;
+  margin-top: 14px;
+  margin-right: 0px;
+  font-size: 17px;
+}
+nav .search {
+  float: right;
+}
+nav .search button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 15px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  nav a,
+  nav input[type="text"] {
+    float: none;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  nav input[type="text"] {
+    border: 1px solid #ccc;
+  }
+}
+
+main {
+  background: #84ffff;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#sidebar {
+  border-top: 1px solid rgba(0, 0, 0, 0.8);
+  border-right: 1px solid rgba(0, 0, 0, 0.8);
+  border-left: 1px solid rgba(0, 0, 0, 0.8);
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#Sidebar_Header {
+  color: black;
+  font-size: 180%;
+  line-height: 55px;
+}
+#Sidebar_Smaller {
+  font-size: 100%;
+  line-height: 25px;
+}
+#content1 {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content2 {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content3 {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content4 {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  grid-area: content4;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content5 {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  grid-area: content5;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content6 {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  grid-area: content6;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content7 {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  grid-area: content7;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content8 {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  grid-area: content8;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content9 {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: #ffffff;
+  grid-area: content9;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+footer {
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "content4"
+      "content5"
+      "content6"
+      "content7"
+      "content8"
+      "content9"
+      "footer";
+  }
+}

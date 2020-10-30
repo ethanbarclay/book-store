@@ -1,0 +1,14 @@
+/**Default_Btstrpious_Comment:
+*
+* ==========================================
+* FOR DEMO PURPOSE
+* ==========================================
+*
+*/
+body {
+  /* background: #ebcd47;
+  background: -webkit-linear-gradient(to right, #ebcd47, #b3d6d2);
+  background: linear-gradient(to right, #ebcd47, #b3d6d2); */
+  min-height: 100vh;
+  padding-top: 3.5rem;
+}
