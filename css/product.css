@@ -8,19 +8,20 @@
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
+        margin-top: .5rem;
+        margin-left: .7rem;
         position:absolute; 
-   	    margin-left: 6em; 
-     	width:150px;
-         bottom:41.7rem;
-         left: 32.3rem;
          overflow: hidden;
          cursor: pointer;
       }
 .price{
     width:15px;
+    color: #747C92;
+    padding: 15px 32px;
     font-size: 20px;
-    margin-left: 7.2em; 
-    margin-bottom: 2em;
+    margin-left: 8.2rem; 
+    margin-top: .5rem;
+    
     bottom: 41.7rem;
     position: static; 
 
