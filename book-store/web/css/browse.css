@@ -3,10 +3,6 @@
   --main-padding: 5px;
 }
 
-body {
-  font-family: "Inter", sans-serif;
-}
-
 .container {
   display: grid;
   height: 100vh;
@@ -19,84 +15,10 @@ body {
     "sidebar content1 content2 content3"
     "sidebar footer footer footer";
   grid-gap: 0.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: #004d40;
   text-align: center;
-}
-
-nav {
-  background: #808080;
-  grid-area: nav;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  box-sizing: border-box;
-  height: 50px;
-  width: 100%;
-}
-nav ul {
-  list-style-type: none;
-  margin: -10px;
-  padding: 0;
-  overflow: hidden;
-}
-nav li {
-  float: left;
-}
-nav li:first-of-type {
-  font-weight: bold;
-}
-nav a:link,
-nav a:visited {
-  display: block;
-  width: 160px;
-  color: #ffffff;
-  background-color: #333;
-  text-align: center;
-  padding: 6px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-nav a:hover,
-nav a:active {
-  background-color: #666;
-}
-nav input[type="text"] {
-  padding: 6px;
-  margin-top: 14px;
-  margin-right: 0px;
-  font-size: 17px;
-}
-nav .search {
-  float: right;
-}
-nav .search button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 15px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-@media screen and (max-width: 600px) {
-  nav a,
-  nav input[type="text"] {
-    float: none;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  nav input[type="text"] {
-    border: 1px solid #ccc;
-  }
 }
 
 main {
-  background: #84ffff;
   grid-area: main;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
@@ -189,19 +111,11 @@ main {
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
+
 footer {
   grid-area: footer;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
-}
-
-a {
-  text-align: center;
-  display: block;
-  font-family: inherit;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 1rem;
 }
 
 @media only screen and (max-width: 550px) {
