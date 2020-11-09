@@ -1,0 +1,25 @@
+<%
+    rs.beforeFirst();
+%>
+<div class="intro">
+<%
+    while(rs.next()){
+    i++;
+    if (i > 3){
+%>
+      <div class="intro">
+    <div class="container-fluid">
+      <a href="">
+          <div class="card book">
+              <img src="<%= rs.getString("coverpic") %>"></img>
+          </div>
+      </a>
+    </div>
+  </div>
+
+
+<%
+    }}
+%>
+    </div>
+  </div>

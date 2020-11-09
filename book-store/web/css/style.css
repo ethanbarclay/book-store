@@ -125,11 +125,11 @@ a:hover {
 }
 
 .book {
-  /* float: left; */
-  /* margin-top: 15vh; */
-  /* margin:5vw; */
-  /* height: 30vw; */
-  /* width: 20vw; */
+  float: left;
+  margin-top: 15vh;
+  margin:5vw;
+  height: 30vw;
+  width: 20vw;
 }
 
 .primary {
