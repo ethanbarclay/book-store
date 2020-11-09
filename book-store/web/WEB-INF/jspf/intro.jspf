@@ -12,7 +12,7 @@
     if (i > 1) break;
 %>
 <div class="intro">
-    <a href="">
+    <a href="product.jsp">
         <div class="card featured">
             <img src="<%= rs.getString("coverpic") %>"></img>
         </div>
