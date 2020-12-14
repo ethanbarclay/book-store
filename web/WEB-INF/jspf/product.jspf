@@ -1,0 +1,33 @@
+<%
+    rs.last();
+    int bookCount = rs.getRow();
+    rs.beforeFirst();
+%>
+<p><%= bookCount %> Matches Found</p>
+<hr/>
+
+<%
+    int i = 0;
+    while(rs.next()){
+    i++;
+    if (i > 1) break;
+    
+%>
+<div class="intro">
+    <a href="">
+        <div class="card featured">
+            <img src="<%= rs.getString("coverpic") %>"></img>
+        </div>
+    </a>
+    <div class="feature-info">
+      <h3><%= rs.getString("title") %></h3><br><br>
+
+      <h4><%= rs.getString("description") %></h4>
+       <button type="button" class="purchase">Buy Now</button> 
+       <h4 class="price">$<%= rs.getString("price") %></h4><br>
+    </div>
+  </div>
+</div>
+<%
+    }
+%>
