@@ -9,9 +9,9 @@
 %>
       <div class="intro">
     <div class="container-fluid">
-      <a href="">
+      <a href="product.jsp?isbn=<%= rs.getString("isbn") %>">
           <div class="card book">
-              <img src="<%= rs.getString("coverpic") %>"></img>
+              <a href="product.jsp?isbn=<%= rs.getString("isbn") %>"><img src="<%= rs.getString("coverpic") %>" alt=""/>
           </div>
       </a>
     </div>
@@ -23,3 +23,7 @@
 %>
     </div>
   </div>
+  
+  
+  
+  
