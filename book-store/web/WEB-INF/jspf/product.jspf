@@ -23,8 +23,10 @@
       <h3><%= rs.getString("title") %></h3><br><br>
 
       <h4><%= rs.getString("description") %></h4>
-       <a href="showCart.jsp?isbn=<%= isbn %>" type="button" class="purchase">Buy Now</a> 
-       <h4 class="price">$<%= rs.getString("price") %></h4><br>
+      <a href="showCart.jsp?isbn=<%= isbn %>">
+        <button type="button" class="purchase">Buy Now</button>
+      </a>
+      <h4 class="price">$<%= rs.getString("price") %></h4><br>
     </div>
   </div>
 </div>
