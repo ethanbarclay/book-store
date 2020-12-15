@@ -61,12 +61,54 @@
                     </tr>
                   </thead>
                   <tbody>
+                    <%
+                        if(cart == null){
+                    %>
                     <tr>
                       <th scope="row" class="border-0">
                         <div class="p-2">
                           <img src="assets/img/VBDummies.JPG" alt="" width="70" class="img-fluid rounded shadow-sm">
                           <div class="ml-3 d-inline-block align-middle">
-                            <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Virtual Basic 4 For Dummies</a></h5><span class="text-muted font-weight-normal font-italic d-block">Genre: Reference</span>
+                            <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Shopping Cart is Empty</a></h5>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><strong></strong></td>
+                      <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                      <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <%
+                        }else{
+                    %>
+                    <%
+                        ArrayList items = cart.getCart();
+                        int itemCount = items.size();
+                        if(itemCount ==0){
+                    %>
+                    <tr>
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <img src="assets/img/VBDummies.JPG" alt="" width="70" class="img-fluid rounded shadow-sm">
+                          <div class="ml-3 d-inline-block align-middle">
+                            <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Shopping Cart is Empty</a></h5>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><strong></strong></td>
+                      <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                      <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                    </tr>
+                    <%
+                        }
+                        for(int i=0; i<itemCount; i++) {
+                        Item item = (Item)items.get(i);
+                    %>
+                    <tr>
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <img src="assets/img/VBDummies.JPG" alt="" width="70" class="img-fluid rounded shadow-sm">
+                          <div class="ml-3 d-inline-block align-middle">
+                            <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle"><%= item.getTitle() %></a></h5><span class="text-muted font-weight-normal font-italic d-block">Genre: Reference</span>
                           </div>
                         </div>
                       </th>
@@ -76,37 +118,12 @@
                       <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
                       <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
                     </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="p-2">
-                          <img src="assets/img/PracticalSQL.JPG" alt="" width="70" class="img-fluid rounded shadow-sm">
-                          <div class="ml-3 d-inline-block align-middle">
-                            <h5 class="mb-0"><a href="#" class="text-dark d-inline-block">Practical SQL</a></h5><span class="text-muted font-weight-normal font-italic">Genre: Reference</span>
-                          </div>
-                        </div>
-                      </th>
-                      <td class="align-middle"><strong>$1.00</strong></td>
-                      <td class="align-middle"><strong>5</strong></td>
-                      <td class="align-middle"><strong></strong></td>
-                      <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
-                      <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        <div class="p-2">
-                          <img src="assets/img/WebWow.JPG" alt="" width="70" class="img-fluid rounded shadow-sm">
-                          <div class="ml-3 d-inline-block align-middle">
-                            <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">The Web Design Wow! Book</a></h5><span class="text-muted font-weight-normal font-italic">Genre: Reference</span>
-                          </div>
-                        </div>
-                        <td class="align-middle"><strong>$120.00</strong></td>
-                        <td class="align-middle"><strong>1</strong></td>
-                        <td class="align-middle"><strong></strong></td>
-                        <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
-                        <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
+                    <%
+                        }
+                    %>
+                    <%
+                        }
+                    %>
                   </tbody>
                 </table>
               </div>
