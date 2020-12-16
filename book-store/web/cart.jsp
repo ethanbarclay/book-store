@@ -28,9 +28,10 @@
     cart = (ShoppingCart)session.getAttribute("cart");
 %>
 <%@include file="WEB-INF/jspf/head.jspf" %>
+<form action="UpdateCartServlet" method="post"></form>
     <div class="px-4 px-lg-0">
       <div class="container text-white py-5 text-center">
-        <h1 class="display-4">Shopping Cart</h1>
+        <h1 class="display-4">Shopping Cart - Total <%= cart.getStringTotal() %></h1>
       </div>
       <div class="pb-5">
         <div class="container">
@@ -112,8 +113,15 @@
                           </div>
                         </div>
                       </th>
-                      <td class="border-0 align-middle"><strong>$20.00</strong></td>
-                      <td class="border-0 align-middle"><strong>1</strong></td>
+                      <td class="border-0 align-middle"><strong>$<%= item.getPrice() %></strong></td>
+                      <td class="border-0 align-middle">
+                          <p>
+                                <button class="material-icons-outlined button" onClick="increaseQuantity('item<%= i %>')">+</button>
+                                <input type="text" size="2" name="item<%= i %>" id="item<%= i %>" value="<%= item.getQuantity() %>" readonly="readonly" />
+                                <button class="material-icons-outlined button" onClick="decreaseQuantity('item<%= i %>')">-</button>
+                                <button class="material-icons-outlined button" onClick="removeItem('item0')">delete</button>
+                           </p>
+                      </td>
                       <td class="border-0 align-middle"><strong></strong></td>
                       <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
                       <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>

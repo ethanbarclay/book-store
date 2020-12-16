@@ -16,7 +16,7 @@ function removeItem(item){
     updateCart();
 }
 function updateCart(){
-    document.forms[0].submit();
+    document.forms[1].submit();
 }
 
 function testimonial(headline, text, sig){

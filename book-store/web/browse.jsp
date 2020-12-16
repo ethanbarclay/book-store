@@ -4,6 +4,7 @@
     ResultSet rs = stmt.executeQuery("select * from Books where Special = 1");
 %>
 <%@include file="WEB-INF/jspf/head.jspf" %>
+
     <div id="sidebar">
       <p id="Sidebar_Header">Favorites</p>
       <p id="Sidebar_Smaller">Web Page Design</p>
