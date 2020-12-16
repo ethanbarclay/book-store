@@ -29,15 +29,17 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
                         </button>
-                        <input class="form-control search" type="text" placeholder="Search" aria-label="Search">
+                        <form action="searchResults.jsp" method="get">
+                            <input class="form-control search" type="text" name="keyword" placeholder="Search" aria-label="Search">
+                        </form>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
                               <a class="nav" href="cart.jsp" style="cursor: pointer;">Cart<span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item active">
+<!--                            <li class="nav-item active">
                               <a class="nav" href="account.jsp" style="cursor: pointer;">Account<span class="sr-only">(current)</span></a>
-                            </li>
+                            </li>-->
                           </ul>
                         </div>
                     </nav>
