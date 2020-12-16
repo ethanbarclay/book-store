@@ -18,12 +18,12 @@ public class UpdateCartServlet extends HttpServlet {
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+     **/
+//     @param request servlet request
+//     @param response servlet response
+//     @throws ServletException if a servlet-specific error occurs
+//     throws IOException if an I/O error occurs
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -71,7 +71,7 @@ public class UpdateCartServlet extends HttpServlet {
         HttpSession session = request.getSession(true);
         ShoppingCart cart = (ShoppingCart)session.getAttribute("cart");
         if(cart==null){
-            response.sendRedirect("showCart.jsp");
+            response.sendRedirect("cart.jsp");
         }else{
             //We have the cart, let's update it
             int itemCount = cart.getItemCount();
@@ -91,7 +91,7 @@ public class UpdateCartServlet extends HttpServlet {
             //Put the cart back in the session
             session.setAttribute("cart",cart);
             //go look at it!
-            response.sendRedirect("showCart.jsp");
+            response.sendRedirect("cart.jsp");
         }
     }
 

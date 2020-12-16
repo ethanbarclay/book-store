@@ -28,7 +28,6 @@
     cart = (ShoppingCart)session.getAttribute("cart");
 %>
 <%@include file="WEB-INF/jspf/head.jspf" %>
-<form action="UpdateCartServlet" method="post"></form>
     <div class="px-4 px-lg-0">
       <div class="container text-white py-5 text-center">
         <h1 class="display-4">Shopping Cart</h1>
@@ -81,6 +80,7 @@
                     <%
                         }else{
                     %>
+                    <form action="UpdateCartServlet" method="post">
                     <%
                         ArrayList items = cart.getCart();
                         int itemCount = items.size();
@@ -126,6 +126,7 @@
                       <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
                       <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
                     </tr>
+                    </form>
                     <%
                         }
                     %>
@@ -141,6 +142,19 @@
                             <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
                         </form>
                     </section>
+                  <tr>
+                      <th scope="row" class="border-0">
+                        <div class="p-2">
+                          <img src="assets/img/VBDummies.JPG" alt="" width="70" class="img-fluid rounded shadow-sm">
+                          <div class="ml-3 d-inline-block align-middle">
+                            <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block align-middle">Total - <%= cart.getStringTotal() %></a></h5>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="border-0 align-middle"><strong></strong></td>
+                      <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                      <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                    </tr>
                     <%
                         }
                     %>
