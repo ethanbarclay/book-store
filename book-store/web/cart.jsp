@@ -130,9 +130,9 @@
                         }
                     %>
                     <section>
-                        <form action="https://sandbox.paypal.com/us/cgi-bin/webscr" method="post"> https://www.paypal.com/us/cgi-bin/webscr to go live 
+                        <form action="https://sandbox.paypal.com/us/cgi-bin/webscr" method="post"> 
                             <input type="hidden" name="cmd" value="_xclick">
-                            <input type="hidden" name="business" value="sb-iq7c74105279@business.example.com"> PayPal SandBox Account 
+                            <input type="hidden" name="business" value="sb-iq7c74105279@business.example.com">
                             <input type="hidden" name="item_name" value="Bookstore Shopping Cart Order">
                             <input type="hidden" name="currency_code" value="USD">
                             <input type="hidden" name="amount" value="<%= cart.getTotal() %>">

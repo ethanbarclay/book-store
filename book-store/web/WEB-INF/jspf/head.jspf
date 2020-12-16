@@ -22,6 +22,7 @@
         <div class="header-container">
             <header class="wrapper clearfix">
                   <nav class="navbar navbar-expand-lg fixed-top">
+                      
                         <div class="navbar-brand brand" href="/">
                           <a href="index.jsp">
                             <img src="img/logo.svg" width="30" height="30" class="d-inline-block align-top" alt="" style="margin-right:10px;"> Book Store
@@ -29,7 +30,7 @@
                         </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
-                        </button>
+                        </button> 
                         <form action="searchResults.jsp" method="get">
                             <input class="form-control search" type="text" name="keyword" placeholder="Search" aria-label="Search">
                         </form>
