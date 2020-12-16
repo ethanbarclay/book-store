@@ -17,10 +17,6 @@ import java.util.Random;
 import javax.servlet.http.HttpSession;
 import org.apache.derby.jdbc.ClientDriver;
 
-/**
- *
- * @author tduffy
- */
 public class SubmitOrderServlet extends HttpServlet {
 
     /**

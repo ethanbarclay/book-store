@@ -6,10 +6,7 @@
 package bookstoreUtils;
 import java.text.NumberFormat;
 import java.util.*;
-/**
- *
- * @author 00220682
- */
+
 public class ShoppingCart {
     private ArrayList cart = new ArrayList();
     private int itemCount;

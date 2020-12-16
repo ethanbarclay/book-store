@@ -31,7 +31,7 @@
 <form action="UpdateCartServlet" method="post"></form>
     <div class="px-4 px-lg-0">
       <div class="container text-white py-5 text-center">
-        <h1 class="display-4">Shopping Cart - Total <%= cart.getStringTotal() %></h1>
+        <h1 class="display-4">Shopping Cart</h1>
       </div>
       <div class="pb-5">
         <div class="container">
@@ -129,24 +129,21 @@
                     <%
                         }
                     %>
+                    <section>
+                        <form action="https://sandbox.paypal.com/us/cgi-bin/webscr" method="post"> https://www.paypal.com/us/cgi-bin/webscr to go live 
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="sb-iq7c74105279@business.example.com"> PayPal SandBox Account 
+                            <input type="hidden" name="item_name" value="Bookstore Shopping Cart Order">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="amount" value="<%= cart.getTotal() %>">
+                            <input type="hidden" name="cancel_return" value="http://localhost:8080/Bookstore/checkout.jsp"> 
+                            <input type="hidden" name="return" value="http://localhost:8080/Bookstore/index.jsp">
+                            <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+                        </form>
+                    </section>
                     <%
                         }
                     %>
-                  
-                     <section>
-            <form action="https://sandbox.paypal.com/us/cgi-bin/webscr" method="post"><!-- https://www.paypal.com/us/cgi-bin/webscr to go live -->
-               <input type="hidden" name="cmd" value="_xclick">
-               <input type="hidden" name="business" value="sb-iq7c74105279@business.example.com"><!-- PayPal SandBox Account -->
-               <input type="hidden" name="item_name" value="Bookstore Shopping Cart Order">
-               <input type="hidden" name="currency_code" value="USD">
-               <input type="hidden" name="amount" value="<%= cart.getTotal() %>">
-               <input type="hidden" name="cancel_return" value="http://localhost:8080/Bookstore/checkout.jsp"> 
-               <input type="hidden" name="return" value="http://localhost:8080/Bookstore/index.jsp">
-               <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-            </form>
-        </section>
-                    
-                    
               </div>
             </div>
           </div>

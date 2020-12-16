@@ -6,10 +6,7 @@
 package bookstoreUtils;
 import java.sql.*;
 import org.apache.derby.jdbc.*;
-/**
- *
- * @author 00220682
- */
+
 public class Item {
     private String ISBN, title, price, coverpic;
     private int quantity;

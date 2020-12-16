@@ -1,8 +1,3 @@
-<%-- 
-    Document   : searchResults
-    Created on : Nov 1, 2020, 12:19:35 PM
-    Author     : 00220682
---%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="WEB-INF/jspf/connection.jspf" %>
 <%
