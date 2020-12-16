@@ -4,7 +4,7 @@
     ResultSet rs = stmt.executeQuery("select * from Books where Special = 1");
 %>
 <%@include file="WEB-INF/jspf/head.jspf" %>
-
+<div class="container">
     <div id="sidebar">
       <p id="Sidebar_Header">Favorites</p>
       <p id="Sidebar_Smaller">Web Page Design</p>
@@ -82,3 +82,4 @@
       <p>Price: $7.99</p>
       <button onclick="">Add to Cart</button>
     </div>
+  </div>
