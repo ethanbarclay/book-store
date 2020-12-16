@@ -119,12 +119,14 @@
                                 <button class="material-icons-outlined button" onClick="increaseQuantity('item<%= i %>')">+</button>
                                 <input type="text" size="2" name="item<%= i %>" id="item<%= i %>" value="<%= item.getQuantity() %>" readonly="readonly" />
                                 <button class="material-icons-outlined button" onClick="decreaseQuantity('item<%= i %>')">-</button>
-                                <button class="material-icons-outlined button" onClick="removeItem('item0')">delete</button>
+                                
                            </p>
                       </td>
                       <td class="border-0 align-middle"><strong></strong></td>
                       <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
-                      <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                      <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+                          <button class="material-icons-outlined button" onClick="removeItem('item0')">Delete</button>
+                      </td>
                     </tr>
                     </form>
                     <%
